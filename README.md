@@ -22,8 +22,7 @@ Need <a href="https://github.com/zootreeves/Objective-C-HMTL-Parser">HTMLParser 
             NSDictionary *dict=(NSDictionary *)obj;
             if(dict[@"twotime"])
              {   
-                NSLog(@"%@-%@/%@/%@\n%@/%@/%@",
-                dict[@"name"],dict[@"day1"]				   	,dict[@"time1"],dict[@"room1"],dict[@"day2"],                				dict[@"time2"],dict[@"room2"]);
+                NSLog(@"%@-%@/%@/%@\n%@/%@/%@",dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"],dict[@"day2"],dict[@"time2"],dict[@"room2"]);
             }
             else
                 {
