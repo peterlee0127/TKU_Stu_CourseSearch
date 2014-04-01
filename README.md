@@ -3,6 +3,11 @@ TKU_Stu_CourseSearch
 
 TKU_Stu_CourseSearch
 
+Need <a href="https://github.com/zootreeves/Objective-C-HMTL-Parser">HTMLParser Library</a>
+
+
+1:In the project settings add "/usr/include/libxml2" to the "header search paths" field   
+2:Click the Frameworks group choose Add -> Existing Frameworks and from the list choose libxml2.dylib
 
 
     TKU_CourseSearch *course = [TKU_CourseSearch shareInstance];
