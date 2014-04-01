@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C839B6C1-C950-415D-AA61-053EB4A4CC8C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TKU_CourseSearch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D88C283F-5876-4BD0-8D8B-43084F463619</key>
+		<string>https://github.com/peterlee0127/TKU_Stu_CourseSearch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TKU_CourseSearch/TKU_CourseSearch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D88C283F-5876-4BD0-8D8B-43084F463619</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/peterlee0127/TKU_Stu_CourseSearch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D88C283F-5876-4BD0-8D8B-43084F463619</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D88C283F-5876-4BD0-8D8B-43084F463619</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TKU_Stu_CourseSearch</string>
+		</dict>
+	</array>
+</dict>
+</plist>
