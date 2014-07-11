@@ -38,7 +38,8 @@ Need <a href="https://github.com/zootreeves/Objective-C-HMTL-Parser">HTMLParser 
 
 
 
-<img src="intro.png" width="600">
+<img src="screen1.png" width="600">
+<img src="screen2.png" width="400">
 
 
 ---
