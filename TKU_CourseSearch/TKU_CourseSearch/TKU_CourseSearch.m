@@ -7,6 +7,7 @@
 //
 
 #import "TKU_CourseSearch.h"
+#import "TKU_CourseModel.h"
 #import "HTMLParser.h"
 
 @implementation TKU_CourseSearch
@@ -228,26 +229,36 @@
                             
                         }];
                         
-                        
-                        
-                        __block NSString *result=@"";
-                        [courseArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        tempArray = courseArray;
+                        courseArray = [[NSMutableArray alloc] init];
+                        [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                             NSDictionary *dict=(NSDictionary *)obj;
                             if(dict[@"twotime"])
-                                {
-                                    //            NSLog(@"%@-%@/%@/%@\n%@/%@/%@", dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"],
-                                    //                  dict[@"day2"],dict[@"time2"],dict[@"room2"]);
-                                result=[result stringByAppendingString:[NSString stringWithFormat:@"\n\n%@\n%@/%@/%@\n%@/%@/%@", dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"],
-                                                                        dict[@"day2"],dict[@"time2"],dict[@"room2"]]];
-                                }
+                            {
+                                TKU_CourseModel *model = [[TKU_CourseModel alloc] init];
+                                model.hasTwoTime = YES;
+                                model.courseName = dict[@"name"];
+                                model.day1 = dict[@"day1"];
+                                model.time1 = dict[@"time1"];
+                                model.room1 = dict[@"room1"];
+                                model.day2 = dict[@"day2"];
+                                model.time2 = dict[@"time2"];
+                                model.room2 = dict[@"room2"];
+                                [courseArray addObject:model];
+                            }
                             else
-                                {
-                                    //            NSLog(@"%@-%@/%@/%@", dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"]);
-                                result=[result stringByAppendingString:[NSString stringWithFormat:@"\n\n%@\n%@/%@/%@", dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"]]];
-                                }
+                            {
+                                TKU_CourseModel *model = [[TKU_CourseModel alloc] init];
+                                model.hasTwoTime = NO;
+                                model.courseName = dict[@"name"];
+                                model.day1 = dict[@"day1"];
+                                model.time1 = dict[@"time1"];
+                                model.room1 = dict[@"room1"];
+                                [courseArray addObject:model];
+                                
+                            }
                             
                         }];
-                        
                             if(completeblock)
                                 completeblock(courseArray,nil);
                     }];
