@@ -18,18 +18,19 @@ Need <a href="https://github.com/zootreeves/Objective-C-HMTL-Parser">HTMLParser 
             return ;
         }
         
-        [data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSDictionary *dict=(NSDictionary *)obj;
-            if(dict[@"twotime"])
-             {   
-                NSLog(@"%@-%@/%@/%@\n%@/%@/%@",dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"],dict[@"day2"],dict[@"time2"],dict[@"room2"]);
+       [data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            TKU_CourseModel *model = (TKU_CourseModel *)obj;
+            if(model.hasTwoTime)
+            {
+                NSLog(@"%@ %@ %@ %@  %@ %@ %@",model.courseName,model.day1,model.time1,model.room1,model.day1,model.time1,model.room1);
             }
             else
-                {
-                    NSLog(@"%@-%@/%@/%@",dict[@"name"],dict[@"day1"],dict[@"time1"],dict[@"room1"]);
-                }
+            {
+                NSLog(@"%@ %@ %@ %@",model.courseName,model.day1,model.time1,model.room1);
+            }
             
         }];
+
 
     }];
 
